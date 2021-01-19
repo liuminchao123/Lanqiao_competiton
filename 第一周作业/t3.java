@@ -1,5 +1,5 @@
 
-class Main{
+public class t3{
 	public static void main(String[] args){
 		int x, y;
 		int father_age = 0;

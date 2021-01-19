@@ -1,5 +1,5 @@
 
-class Main{
+public class t2{
 	public static void main(String[] args){
 		int candles = 0;
 		int age_now = 4;  

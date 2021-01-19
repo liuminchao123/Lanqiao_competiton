@@ -36,7 +36,7 @@ class Main{
 			return; // 终止函数，返回空值
 		}
 		
-		// 
+		// 迭代核心
 		for(int i = m; i < 9; i ++) {
 			swap(m,i);
 			dfs(m+1);
@@ -45,11 +45,11 @@ class Main{
 		
 	}
  
+ 	// 交换数组中指定位置的两个元素
 	static void swap(int i, int j) {
 		int t = a[i];
 		a[i] = a[j];
 		a[j] = t;
 	}
-
 
 }
