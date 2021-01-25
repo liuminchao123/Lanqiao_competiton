@@ -1,9 +1,9 @@
 
-class Main{
+public class t1{
 	public static void main(String[] args){
-		int x = 1;
-		int y = 0;
-		int sum = 0;
+		float x = 1;
+		float y = 0;
+		float sum = 0;
 
 		for(; x <= 100; x ++){
 			y = x * x / 2 + x / 2;
