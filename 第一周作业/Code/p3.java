@@ -12,7 +12,5 @@ public class p3{
 		System.out.println(x + "-" + y + "=" + (x-y));
 		System.out.println(x + "*" + y + "=" + (x*y));
 		System.out.println(x + "/" + y + "=" + (x/y));
-
 	}
-
 }
