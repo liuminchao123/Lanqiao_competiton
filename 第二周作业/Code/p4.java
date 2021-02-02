@@ -25,15 +25,19 @@ public class p4{
 				array[2][3] = array1[7];
 				array[3][0] = array1[8];
 				array[3][2] = array1[9];
-				for(int k = 0; k < 4; k ++)
-					sum = sum + array[0][k];
 
-				if(sum_same(array, sum))
-					System.out.println(array[2][3]);
+				permute(array, array1, 0);
 
-				array1 = swap(array1, i, j-1); // 复原
-				array1 = swap(array1, i, j);
-				sum = 0;  // 归零
+				// 计算每行每列应该满足的和
+				// for(int k = 0; k < 4; k ++)
+				// 	sum = sum + array[0][k];
+
+				// if(sum_same(array, sum))
+				// 	System.out.println(array[2][3]);
+
+				// array1 = swap(array1, i, j-1); // 复原
+				// array1 = swap(array1, i, j);
+				// sum = 0;  // 归零
 			}
 		}
 	}
@@ -67,18 +71,45 @@ public class p4{
 		return true;	
 	}
 
+	// 全排列
+	static void permute(int[][] array, int[] array1, int start){
+		int sum = 0;
+		
+		if(start == array1.length) // 输出
+				System.out.println(Arrays.toString(array1));
+		else{
+			for(int i = start;i < array1.length;++ i){
+				swap(array1,start,i);  //  交换元素
+				permute(array, array1, start+1);  //交换后，再进行全排列算法
+
+				// 计算每行每列应该满足的和
+				for(int k = 0; k < 4; k ++)
+					sum = sum + array[0][k];
+
+				if(sum_same(array, sum))
+					System.out.println(array[2][3]);
+
+				swap(array1, start, i);  //还原成原来的数组，便于下一次的全排列
+				}
+		}
+
+	}
+
 	// 交换数组中指定位置的元素
 	static int[] swap(int[] array, int a, int b){
 
-		try{
-			int c = array[a];
-			array[a] = array[b];
-			array[b] = c;
-		}catch (Exception e){
-			return array;
-		}
+		// try{
+		// 	int c = array[a];
+		// 	array[a] = array[b];
+		// 	array[b] = c;
+		// }catch (Exception e){
+		// 	return array;
+		// }
+		int c = array[a];
+		array[a] = array[b];
+		array[b] = c;
 
-		System.out.println(Arrays.toString(array));
+		// System.out.println(Arrays.toString(array));
 		return array;
 		}
 }

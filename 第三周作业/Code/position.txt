@@ -1,0 +1,3 @@
+D:\Github_NOTES\Lanqiao_competiton\第三周作业\Code
+
+chcp 65001

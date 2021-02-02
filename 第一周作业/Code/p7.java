@@ -1,4 +1,3 @@
-
 public class p7{
 	public static void main(String[] args) {
 		Fight(0);
@@ -13,16 +12,18 @@ public class p7{
 
 	public static void Fight(int i) {
 		double m,n;
+
 		if(i>=4) {
 			if(Math.abs(a-b) < 1000) {
 				count++;//计数器
 				return;
 			}
-	
+
 		}
 		else {
 			m=a;
 			n=b;//存数据
+
 			a=a+b/4;
 			b=b*3/4;//甲赢
 			Fight(i+1);//下一回合
