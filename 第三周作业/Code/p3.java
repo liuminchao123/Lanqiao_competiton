@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class p2{
+public class p3{
 	public static void main(String[] args){
 		Scanner scanner = new Scanner(System.in);
 
@@ -11,25 +11,26 @@ public class p2{
 		// 读取迷宫图案 抽象成二维数组
 		int[][] Maze = new int[n][m];
 		String[] MazeN = new String[n];
+
 		for(int i = 0;i < n; i ++){
 			MazeN[i] = scanner.nextLine();
 			char[] CharMazeN = MazeN[i].toCharArray();
-			for(int j = 0; j < m; j ++){
-				Maze[i][j] = CharMazeN[j] - '0';
+			// for(int j = 0; j < m; j ++){
+			// 	Maze[i][j] = CharMazeN[j] - '0';
 				// System.out.print(Maze[i][j] + ",");
 			}
 			// System.out.println();
-		}
-		for(int k = 1; k < 3; k ++){
-			for(int h =1; h < 3; h ++)
-				System.out.print(Maze[k][h] + ",");
-			System.out.println();
-		}
+		// }
+		// for(int k = 1; k < 3; k ++){
+		// 	for(int h =1; h < 3; h ++)
+		// 		System.out.print(Maze[k][h] + ",");
+		// 	System.out.println();
+		// }
 
-		// 走迷宫
-		int Steps = 0;
-		String StepsRiddle = "";
-		go_maze(Maze, 0, 0, StepsRiddle, Steps);
+		// // 走迷宫
+		// int Steps = 0;
+		// String StepsRiddle = "";
+		// go_maze(Maze, 0, 0, StepsRiddle, Steps);
 	}
 
 	// 走迷宫   x,y 为起始点
