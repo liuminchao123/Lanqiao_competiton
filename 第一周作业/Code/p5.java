@@ -29,10 +29,10 @@ public class p5{
 	// 从整数i中取出j位的数 j代表数量级
 	static int take(int i, int j){
 		int i_j = 0;  // i的j位数
-		if(j == 1) i_j = i - i%10;
+		if(j == 1) i_j = i%10;
 		if(j == 10) i_j = (i%100 - take(i, 1))/10;
-		if(j == 100) i_j = i%1000 - take(i, 10)*10 - take(i, 1);
-		if(j == 1000) i_j = i%10000 - take(i, 100)*100 - take(i, 10)*10 - take(i, 1);
+		if(j == 100) i_j = (i%1000 - take(i, 10)*10 - take(i, 1))/100;
+		if(j == 1000) i_j = (i%10000 - take(i, 100)*100 - take(i, 10)*10 - take(i, 1))/1000;
 
 		return i_j;  // 返回该位上的数
 	}

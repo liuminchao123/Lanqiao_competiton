@@ -1,0 +1,2 @@
+D:\Github_NOTES\Lanqiao_competiton\第四周作业\Code
+chcp 65001
